@@ -1,7 +1,10 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import {useState} from 'react'
+import shortenURL from "../util/shortenURL"
 
 export default function Home() {
+  const [value, setValue] = useState(null)
   return (
     <div className={styles.container}>
       <Head>
@@ -49,12 +52,16 @@ export default function Home() {
         <div className={styles.short}>
           <input
             // defaultValue="Shorten a link here"
+            value={value}
             placeholder="Shorten a link here"
             id="link_shortner"
             className={styles.input}
             type="search"
+            onChange={(e)=> setValue(e.target.value)}
+            
           ></input>
-          <button className={styles.btn_shorten}>Shorten It!</button>
+          <button className={styles.btn_shorten}
+          onClick={()=> shortenURL(value)}>Shorten It!</button>
         </div>
         <div className={styles.features}>
           <h2>Advanced Statistics</h2>
