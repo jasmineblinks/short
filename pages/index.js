@@ -1,10 +1,11 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import {useState} from 'react'
-import shortenURL from "../util/shortenURL"
+import { useState } from "react";
+import shortenURL from "../util/shortenURL";
 
 export default function Home() {
-  const [value, setValue] = useState(null)
+  const [value, setValue] = useState(null);
+  const [result, setResult] = useState();
   return (
     <div className={styles.container}>
       <Head>
@@ -57,11 +58,14 @@ export default function Home() {
             id="link_shortner"
             className={styles.input}
             type="search"
-            onChange={(e)=> setValue(e.target.value)}
-            
-          ></input>
-          <button className={styles.btn_shorten}
-          onClick={()=> shortenURL(value)}>Shorten It!</button>
+            onChange={(e) => setValue(e.target.value)}></input>
+          <button
+            className={styles.btn_shorten}
+            onClick={() => shortenURL(value, setResult)}>
+            Shorten It!
+          </button>
+
+          <pre id={styles.the_result}>{result}</pre>
         </div>
         <div className={styles.features}>
           <h2>Advanced Statistics</h2>
@@ -70,42 +74,73 @@ export default function Home() {
             statistics dashboard.
           </p>
           <div className={styles.grid}>
-          <div className={styles.card}>
-            <h3>Brand Recognition</h3>
-            <p>Boost your brand recognition with each click. Generic links don’t 
-  mean a thing. Branded links help instil confidence in your content.</p>
+            <div className={styles.card}>
+              <div className={styles.icon_text}>
+                {" "}
+                <img
+                  src="/icon-brand-recognition.svg"
+                  alt="shortly Logo"
+                  className={styles.logo}
+                />
+              </div>
+
+              <h3>Brand Recognition</h3>
+              <p>
+                Boost your brand recognition with each click. Generic links
+                don’t mean a thing. Branded links help instil confidence in your
+                content.
+              </p>
+            </div>
+            <div className={styles.card_two}>
+              <div className={styles.card}>
+                <div className={styles.icon_text}>
+                  {" "}
+                  <img
+                    src="/icon-detailed-records.svg"
+                    alt="shortly Logo"
+                    className={styles.logo}
+                  />
+                </div>
+                <h3>Detailed Records</h3>
+                <p>
+                  Gain insights into who is clicking your links. Knowing when
+                  and where people engage with your content helps inform better
+                  decisions.
+                </p>
+              </div>
+            </div>
+            <div className={styles.card_three}>
+              <div className={styles.card}>
+                <div className={styles.icon_text}>
+                  {" "}
+                  <img
+                    src="/icon-fully-customizable.svg"
+                    alt="shortly Logo"
+                    className={styles.logo}
+                  />
+                </div>
+                <h3> Fully Customizable</h3>
+                <p>
+                  Improve brand awareness and content discoverability through
+                  customizable links, supercharging audience engagement.
+                </p>
+              </div>
+            </div>
           </div>
-
-          <div className={styles.card}>
-            <h3>Detailed Records</h3>
-            <p>Gain insights into who is clicking your links. Knowing when and where 
-  people engage with your content helps inform better decisions.</p>
-          </div>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3> Fully Customizable</h3>
-            <p>Improve brand awareness and content discoverability through customizable 
-  links, supercharging audience engagement.</p>
-          </a>
-
-          
         </div>
+        <div className={styles.boost}>
+          <h3 className={styles.boost_text}>Boost your links today</h3>
+          <button className={styles.boost_btn}>Get Started</button>
         </div>
-
-        
       </main>
 
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/logo.svg" alt="shortly Logo" className={styles.logo} />
+          rel="noopener noreferrer">
+          Powered by {"Faith Pueneh "}
+          {/* <img src="/logo.svg" alt="shortly Logo" className={styles.logo} /> */}
         </a>
       </footer>
     </div>
