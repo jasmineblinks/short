@@ -123,6 +123,7 @@
   margin-bottom: 25px;
 }
 .grid {
+  /* position: relative; */
   display: grid;
   grid-template-columns: repeat(3, 450px);
   grid-template-rows: repeat(6, 1fr);
@@ -160,12 +161,6 @@
   font-size: 16px;
   line-height: 1.5;
 }
-.backfield {
-  background-color: #2acfcf;
-  width: 100%;
-
-  border-radius: 50px;
-}
 
 /* .card p {
   margin-right: 25px;
@@ -174,11 +169,16 @@
   line-height: 1.5;
 }  */
 
+.card_one {
+  z-index: 900;
+}
 .card_two {
   margin-top: 4em;
+  z-index: 900;
 }
 .card_three {
   margin-top: 8em;
+  z-index: 900;
 }
 .short {
   background: linear-gradient(rgba(59, 48, 84, 0.9), rgba(35, 33, 39, 0.9)),

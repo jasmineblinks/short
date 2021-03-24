@@ -75,11 +75,20 @@ export default function Home() {
               advanced statistics dashboard.
             </p>
           </div>
-          <div className={styles.backfield}>
-            <p>this</p>
-          </div>
 
           <div className={styles.grid}>
+            <hr
+              className={styles.backfield}
+              style={{
+                position: "absolute",
+                backgroundColor: "#2acfcf",
+                width: "100%",
+                padding: "5px",
+                marginBottom: "10px",
+                borderRadius: "50px",
+                border: "none",
+              }}
+            />
             <div className={styles.card_one}>
               <div className={styles.card}>
                 <div className={styles.icon_text}>
