@@ -75,23 +75,29 @@ export default function Home() {
               advanced statistics dashboard.
             </p>
           </div>
-          <div className={styles.grid}>
-            <div className={styles.card}>
-              <div className={styles.icon_text}>
-                {" "}
-                <img
-                  src="/icon-brand-recognition.svg"
-                  alt="shortly Logo"
-                  className={styles.logo}
-                />
-              </div>
+          <div className={styles.backfield}>
+            <p>this</p>
+          </div>
 
-              <h3>Brand Recognition</h3>
-              <h5>
-                Boost your brand recognition with each click. Generic links
-                don’t mean a thing. Branded links help instil confidence in your
-                content.
-              </h5>
+          <div className={styles.grid}>
+            <div className={styles.card_one}>
+              <div className={styles.card}>
+                <div className={styles.icon_text}>
+                  {" "}
+                  <img
+                    src="/icon-brand-recognition.svg"
+                    alt="shortly Logo"
+                    className={styles.logo}
+                  />
+                </div>
+
+                <h3>Brand Recognition</h3>
+                <h5>
+                  Boost your brand recognition with each click. Generic links
+                  don’t mean a thing. Branded links help instil confidence in
+                  your content.
+                </h5>
+              </div>
             </div>
             <div className={styles.card_two}>
               <div className={styles.card}>
@@ -130,6 +136,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+
         <div className={styles.boost}>
           <h3 className={styles.boost_text}>Boost your links today</h3>
           <button className={styles.boost_btn}>Get Started</button>
