@@ -184,8 +184,7 @@
   background: linear-gradient(rgba(59, 48, 84, 0.9), rgba(35, 33, 39, 0.9)),
     url("/bg-shorten-desktop.svg");
   width: 50%;
-  bottom: -130px;
-  position: fixed;
+  bottom: -200px;
   height: 80px;
   border-radius: 5px;
   position: absolute;
@@ -238,13 +237,13 @@
   cursor: pointer;
 }
 #the_result {
-  background-color: hsl(255, 11%, 22%);
-  color: #fafafa;
-  border-radius: 20px;
+  background-color: #fff;
+  color: hsl(255, 11%, 22%);
+  border-radius: 5px;
   /* margin-top: 2em auto; */
   margin: 2em auto;
-  padding: 10px;
-  width: 500px;
+  padding: 20px;
+  width: 100%;
   text-align: center;
 }
 .icon_text {

@@ -77,7 +77,7 @@ export default function Home() {
           </div>
 
           <div className={styles.grid}>
-            <hr
+            {/* <hr
               className={styles.backfield}
               style={{
                 position: "absolute",
@@ -88,7 +88,7 @@ export default function Home() {
                 borderRadius: "50px",
                 border: "none",
               }}
-            />
+            /> */}
             <div className={styles.card_one}>
               <div className={styles.card}>
                 <div className={styles.icon_text}>
