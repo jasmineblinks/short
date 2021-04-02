@@ -201,7 +201,12 @@
     position: absolute;
   }
 }
-
+.row {
+  clear: both;
+}
+.columns {
+  padding: 0;
+}
 .features {
   width: 100%;
   background-color: hsl(0, 0%, 75%);
